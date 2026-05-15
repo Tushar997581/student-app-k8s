@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: mukunddeo9325/backend:latest
+        image: mukunddeo9325/backend3:latest
         ports:
         - containerPort: 8080
 
@@ -24,7 +24,7 @@ kind: Service
 metadata:
   name: backend-svc
 spec:
-  type: LoadBalancer
+  type: ClusterIP 
   selector:
     app: backend
   ports:
