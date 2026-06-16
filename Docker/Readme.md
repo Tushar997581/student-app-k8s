@@ -7,7 +7,7 @@
 #!/bin/bash
 sudo apt update
 sudo apt install mysql-client -y
-git clone https://github.com/abhipraydhoble/studentapplication.git
+git clone https://github.com/mukundDeo9325/student-app-k8s.git
 sudo apt update -y
 sudo apt install docker.io  -y
 sudo systemctl start docker
