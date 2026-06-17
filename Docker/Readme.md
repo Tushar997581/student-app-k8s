@@ -74,15 +74,15 @@ vim src/main/resources/application.properties
 ### Build Docker image and push to dockerhub 
 
 ````
-docker build -t abhipraydh96/backend .
+docker build -t mukunddeo9325/backend .
 ````
 ````
-docker push abhipraydh96/backend
+docker push mukunddeo9325/backend
 ````
 
 ### Create Backend COntainer
 ````
-docker run -itd --name backend -p 8080:8080 abhipraydh96/backend
+docker run -itd --name backend -p 8080:8080 mukunddeo9325/backend
 ````
 
 
@@ -98,15 +98,15 @@ vim .env
 ### Build Docker image and push to dockerhub 
 
 ````
-docker build -t abhipraydh96frontend .
+docker build -t mukunddeo9325/frontend .
 ````
 ````
-docker push abhipraydh96/frontend
+docker push mukunddeo9325/frontend 
 ````
 
 ### Create Backend COntainer
 ````
-docker run -itd --name frontend -p 80:80 abbhipraydh96/frontend
+docker run -itd --name frontend -p 80:80 mukunddeo9325/frontend 
 ````
 
 <img width="1867" height="923" alt="image" src="https://github.com/user-attachments/assets/4287e8e8-3518-42f6-9cf2-750434309ba3" />
