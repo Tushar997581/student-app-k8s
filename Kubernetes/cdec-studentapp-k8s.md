@@ -42,6 +42,7 @@ vim src/main/resources/application.properties  ## update the database credential
 ```
 docker build -t username/backendrepo .
 ```
+![docerback](./images/docerback.png)
 ## docker login and push the images to docker hub 
 ```
 docker login
@@ -82,6 +83,40 @@ spec:
 ```
 kubectl apply -f backend.yaml
 ```
+## this will run backend pod and service
+
+9. step8 : go to frontend dir and ceck for .env file
+```
+vim .env
+```
+## in .env file you will the backend refrance while using ingress you need to give path of ingress for this application we are using /api 
+```
+VITE_API_URL=/api
+```
+## now create an docker container to run application 
+```
+docker build -t username/frontendrepo .
+```
+## push this images to dockerhub as well as update in frontend.yaml file 
+```
+docker push username/frontendrepo:tag
+```
+```
+kubectl apply -f frontend.yaml
+```
+![all-pod](./images/allpod.png)
+
+10. step10 : check for ingress endpoint
+![ingress](./images/appingress.png)
+
+## also make shure that you have update loadbalcer sequrity group 
+![ingressapp](./images/lbingress.png)
+
+# check for application is running or not and data is getting saved in application or not 
+![app](./images/app.png)
+
+
+
 
 
 
